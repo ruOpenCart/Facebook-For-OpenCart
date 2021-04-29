@@ -9,60 +9,60 @@
 $_['heading_title']                         = '<span style="color:#1877F2;"><i class="fa fa-facebook-square"></i> Facebook Business Extension</span>';
 
 // Text
-$_['text_extension']                        = 'Extensions';
-$_['text_success']                          = 'Success: You have modified module Facebook Business Extension!';
-$_['text_edit']                             = 'Edit Facebook Business Extension module';
-$_['text_heading']                          = 'Turn your products into ads on Facebook';
-$_['text_info_1']                           = 'Easily install a pixel and create a product catalog on Facebook to sell more of your products.';
-$_['text_info_2']                           = 'Use the pixel to build the right audience and measure the return on your ad spend.';
-$_['text_info_3']                           = 'Promote all your products at once with your catalog instead of having to create individual ads.';
-$_['text_upgrade_message']                  = 'A newer version of the Facebook Business Extension plugin is available. To download it, go to <a href="https://github.com/facebookincubator/Facebook-For-OpenCart/releases" target="_blank">Github</a> or <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=32336" target="_blank">OpenCart marketplace</a>.';
-$_['text_plugin_version']                   = 'Plugin Version %s';
+$_['text_extension']                        = 'Расширения';
+$_['text_success']                          = 'Успешно: Вы модифицировали модуль Facebook Business Extension!';
+$_['text_edit']                             = 'Редактировать модуль Facebook Business Extension';
+$_['text_heading']                          = 'Превращайте свои товары в рекламу на Facebook';
+$_['text_info_1']                           = 'Легко установите пиксель и создайте каталог товаров на Facebook, чтобы продавать больше своих товаров.';
+$_['text_info_2']                           = 'Используйте пиксель, чтобы собрать нужную аудиторию и измерить рентабельность ваших рекламных затрат.';
+$_['text_info_3']                           = 'Продвигайте сразу все свои продукты с помощью каталога, вместо того, чтобы создавать отдельные объявления.';
+$_['text_upgrade_message']                  = 'Доступна более новая версия плагина Facebook Business Extension. Чтобы скачать его, перейдите по ссылке <a href="https://github.com/facebookincubator/Facebook-For-OpenCart/releases" target="_blank">Github</a> | <a href="https://github.com/ruOpenCart/Facebook-For-OpenCart/releases" target="_blank">Github с переводом на русский язык</a> или <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=32336" target="_blank">маркетплейс OpenCart</a>.';
+$_['text_plugin_version']                   = 'Версия плагина %s';
 
 // Tab
-$_['tab_connection']                        = 'Connection';
-$_['tab_settings']                          = 'Settings';
+$_['tab_connection']                        = 'Подключение';
+$_['tab_settings']                          = 'Настройки';
 
 // Entry
-$_['entry_cookie_bar']                      = 'Show cookie bar on store website';
-$_['entry_sync_specials']                   = 'Sync product special price as discount to Facebook catalog';
+$_['entry_cookie_bar']                      = 'Показывать панель cookie на сайте магазина';
+$_['entry_sync_specials']                   = 'Синхронизировать специальную цену продукта как скидку с каталогом Facebook';
 
 // Help
-$_['help_sync_specials']                    = 'Requires resync of products';
+$_['help_sync_specials']                    = 'Требуется повторная синхронизация товаров';
 
 // Error
-$_['error_permission']                      = 'Warning: You do not have permission to modify Facebook Business Extension!';
-$_['error_maintenance_mode']                = 'Warning: We have detected that your OpenCart store is in maintenance mode. This will cause Facebook catalog scheduled sync to fail. To disable maintenance mode, access Settings -> Store -> Server tab, and select No for the Maintenance Mode option.';
+$_['error_permission']                      = 'Предупреждение: У вас нет разрешения на изменение Facebook Business Extension!';
+$_['error_maintenance_mode']                = 'Предупреждение: Мы обнаружили, что ваш магазин OpenCart находится в режиме обслуживания. Это приведет к сбою запланированной синхронизации каталога Facebook. Чтобы отключить режим обслуживания, перейдите на вкладку Настройки -> Магазин -> Сервер и выберите «Нет» для параметра «Режим обслуживания».';
 
-// Product Page
+// Product page
 $_['tab_facebook']                           = 'Facebook';
 
-$_['entry_facebook_google_product_category'] = 'Google Product Category';
-$_['entry_facebook_condition']               = 'Condition';
-$_['entry_facebook_age_group']               = 'Age Group';
-$_['entry_facebook_color']                   = 'Color';
-$_['entry_facebook_gender']                  = 'Gender';
-$_['entry_facebook_material']                = 'Material';
-$_['entry_facebook_pattern']                 = 'Pattern';
+$_['entry_facebook_google_product_category'] = 'Категория товаров Google';
+$_['entry_facebook_condition']               = 'Условие';
+$_['entry_facebook_age_group']               = 'Возрастная группа';
+$_['entry_facebook_color']                   = 'Цвет';
+$_['entry_facebook_gender']                  = 'Пол';
+$_['entry_facebook_material']                = 'Материал';
+$_['entry_facebook_pattern']                 = 'Шаблон';
 
-$_['text_please_select']                     = '--- Please Select ---';
-$_['text_condition_new']                     = 'New';
-$_['text_condition_refurbished']             = 'Refurbished';
-$_['text_condition_used']                    = 'Used';
-$_['text_age_group_all_ages']                = 'All Ages';
-$_['text_age_group_adult']                   = 'Adult';
-$_['text_age_group_teen']                    = 'Teen';
-$_['text_age_group_kids']                    = 'Kids';
-$_['text_age_group_toddler']                 = 'Toddler';
-$_['text_age_group_infant']                  = 'Infant';
-$_['text_age_group_newborn']                 = 'Newborn';
-$_['text_gender_female']                     = 'Female';
-$_['text_gender_male']                       = 'Male';
-$_['text_gender_unisex']                     = 'Unisex';
-$_['text_material_cotton']                   = 'Cotton';
-$_['text_material_denim']                    = 'Denim';
-$_['text_material_leather']                  = 'Leather';
+$_['text_please_select']                     = '--- Пожалуйста выберите ---';
+$_['text_condition_new']                     = 'Новое';
+$_['text_condition_refurbished']             = 'Восстановленное';
+$_['text_condition_used']                    = 'Использованное';
+$_['text_age_group_all_ages']                = 'Все возраста';
+$_['text_age_group_adult']                   = 'Взрослый';
+$_['text_age_group_teen']                    = 'Подросток';
+$_['text_age_group_kids']                    = 'Дети';
+$_['text_age_group_toddler']                 = 'Ребенок, начинающий ходить';
+$_['text_age_group_infant']                  = 'Младенец';
+$_['text_age_group_newborn']                 = 'Новорожденный';
+$_['text_gender_female']                     = 'Женский';
+$_['text_gender_male']                       = 'Мужской';
+$_['text_gender_unisex']                     = 'Унисекс';
+$_['text_material_cotton']                   = 'Хлопок';
+$_['text_material_denim']                    = 'Джинсовая ткань';
+$_['text_material_leather']                  = 'Натуральная кожа';
 
-$_['text_additional_fields_info']            = 'The fields listed below will be used in your Facebook Catalog Feed and are entirely optional.';
+$_['text_additional_fields_info']            = 'Поля, перечисленные ниже, будут использоваться в вашей ленте каталога Facebook и не являются обязательными.';
 
-$_['error_google_product_category']          = 'Error: Couldn\'t retrieve Google Product Categories! Please try again by refreshing the page.';
+$_['error_google_product_category']          = 'Ошибка: Не удалось получить категории продуктов Google! Пожалуйста, попробуйте еще раз, обновив страницу.';
