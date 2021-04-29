@@ -1,35 +1,35 @@
-# Contributing to Facebook For OpenCart
-We want to make contributing to this project as easy and transparent as
-possible.
+# Вклад в Facebook для OpenCart
 
-## Pull Requests
-We actively welcome your pull requests.
+Мы хотим сделать участие в этом проекте максимально простым и прозрачным.
 
-1. Fork the repo and create your branch from `master`.
-2. If you've added code that should be tested, add tests.
-3. If you've changed APIs, update the documentation.
-4. Ensure the test suite passes.
-5. Make sure your code lints.
-6. If you haven't already, complete the Contributor License Agreement ("CLA").
+## Пулл Реквесты
 
-## Contributor License Agreement ("CLA")
-In order to accept your pull request, we need you to submit a CLA. You only need
-to do this once to work on any of Facebook's open source projects.
+Мы активно приветствуем ваши ПР.
 
-Complete your CLA here: <https://code.facebook.com/cla>
+1. Форкните репозиторий и создайте свою ветку из `master`.
+2. Если вы добавили код, который нужно протестировать, добавьте тесты.
+3. Если вы изменили API, обновите документацию.
+4. Убедитесь, что набор тестов прошел успешно.
+5. Убедитесь, что ваш код линкуется.
+6. Если вы еще этого не сделали, заполните Лицензионное соглашение участника ("CLA").
 
-## Issues
-We use GitHub issues to track public bugs. Please ensure your description is
-clear and has sufficient instructions to be able to reproduce the issue.
+## Лицензионное соглашение участника ("CLA")
 
-Facebook has a [bounty program](https://www.facebook.com/whitehat/) for the safe
-disclosure of security bugs. In those cases, please go through the process
-outlined on that page and do not file a public issue.
+Чтобы принять ваш запрос на перенос, нам нужно, чтобы вы отправили CLA. Вам нужно сделать это только один раз, чтобы работать над любым из проектов Facebook с открытым исходным кодом.
 
-## Coding Style  
-* 2 spaces for indentation rather than tabs
-* 80 character line length
+Заполните CLA здесь: <https://code.facebook.com/cla>
 
-## License
-By contributing to Facebook For OpenCart, you agree that your contributions will be licensed
-under the LICENSE file in the root directory of this source tree.
+## Проблемы
+
+Мы используем проблемы GitHub для отслеживания общедоступных ошибок. Убедитесь, что ваше описание четкое и содержит достаточно инструкций, чтобы воспроизвести проблему.
+
+У Facebook есть [программа вознаграждений](https://www.facebook.com/whitehat/) для безопасного раскрытия ошибок безопасности. В таких случаях, пожалуйста, выполните процедуру, описанную на этой странице, и не создавайте публичную проблему.
+
+## Стиль кода
+
+* 2 пробела для отступа, а не табуляции
+* длина строки 80 символов
+
+## Лицензия
+
+Принимая участие в Facebook For OpenCart, вы соглашаетесь с тем, что ваш влад будут лицензироваться под файлом LICENSE в корневом каталоге этого дерева исходных текстов.

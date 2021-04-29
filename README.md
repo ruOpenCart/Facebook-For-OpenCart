@@ -1,22 +1,21 @@
-# Facebook Business Extension for OpenCart v2.0.1.1 to v3.0.3.7
+# Расширение Facebook Business для OpenCart v2.0.1.1 to v3.0.3.7
 
-- The latest version of the plugin can be found at [here](https://github.com/facebookincubator/Facebook-For-OpenCart/releases/latest)
-- The latest version of the README can be found at [here](https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/README.md)
-- The latest version of the INSTALL_GUIDE can be found at [here](https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/INSTALL_GUIDE.md)
-- The previous version of INSTALL_GUIDE before v4.0.0 can be found at [here](https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/INSTALL_GUIDE_3.x.x.md)
-- The previous version of INSTALL_GUIDE before v3.0.0 can be found at [here](https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/INSTALL_GUIDE_2.x.x.md)
-- The latest version of the FAQ can be found at [here](https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/FAQ.md)
-- The previous version of the FAQ before v4.0.0 can be found at [here](https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/FAQ_3.x.x.md)
-- The previous version of the FAQ before v3.0.0 can be found at [here](https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/FAQ_2.x.x.md)
-- For other questions or bug reporting **regarding the OpenCart plugin**, please open a ticket with us at our [helpdesk](https://marketinsg.zendesk.com/') or open a new issue on [github](https://github.com/facebookincubator/)
-- For Facebook related issues or enquiries, please open a ticket with Facebook Business Support at [Facebook Business Help Centre](https://www.facebook.com/business/help/support)
+- Последнюю версию плагина можно найти по адресу [здесь](https://github.com/facebookincubator/Facebook-For-OpenCart/releases/latest) или [перевод](https://github.com/ruOpenCart/Facebook-For-OpenCart/releases/latest)
+- Последнюю версию README можно найти по адресу [здесь](https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/README.md) или [перевод](https://github.com/ruOpenCart/Facebook-For-OpenCart/blob/master/README.md)
+- Последнюю версию INSTALL_GUIDE можно найти по адресу [здесь](https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/INSTALL_GUIDE.md) или [перевод](https://github.com/ruOpenCart/Facebook-For-OpenCart/blob/master/INSTALL_GUIDE.md)
+- Предыдущую версию INSTALL_GUIDE до v4.0.0 можно найти по адресу [здесь](https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/INSTALL_GUIDE_3.x.x.md) или [перевод](https://github.com/ruOpenCart/Facebook-For-OpenCart/blob/master/INSTALL_GUIDE_3.x.x.md)
+- Предыдущую версию INSTALL_GUIDE до v3.0.0 можно найти по адресу [здесь](https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/INSTALL_GUIDE_2.x.x.md) или [перевод](https://github.com/ruOpenCart/Facebook-For-OpenCart/blob/master/INSTALL_GUIDE_2.x.x.md)
+- Последнюю версию FAQ можно найти по адресу [здесь](https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/FAQ.md) или [перевод](https://github.com/ruOpenCart/Facebook-For-OpenCart/blob/master/FAQ.md)
+- Предыдущую версию FAQ до v4.0.0 можно найти по адресу [здесь](https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/FAQ_3.x.x.md) или [перевод](https://github.com/ruOpenCart/Facebook-For-OpenCart/blob/master/FAQ_3.x.x.md)
+- Предыдущую версию FAQ до v3.0.0 можно найти по адресу [здесь](https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/FAQ_2.x.x.md) или [перевод](https://github.com/ruOpenCart/Facebook-For-OpenCart/blob/master/FAQ_2.x.x.md)
+- По другим вопросам или сообщениям об ошибках **в отношении плагина OpenCart**, пожалуйста, откройте заявку на нашем сайте [helpdesk](https://marketinsg.zendesk.com/') или откройте новую проблему на [github](https://github.com/facebookincubator/)
+- Если у вас возникли вопросы или вопросы, связанные с Facebook, отправьте заявку в службу поддержки Facebook Business на странице [Справочный центр Facebook Business](https://www.facebook.com/business/help/support)
 
+Исходный код бизнес-расширения Facebook для OpenCart. Это для OpenCart v2.0.1.1 to v3.0.3.7.
 
-Source code for Facebook Business Extension for OpenCart. This is for OpenCart v2.0.1.1 to v3.0.3.7.  
+## Особенности
 
-
-# Features:
-1. Auto-injection of Facebook Pixel events to all store webpages in traditional/responsive web design. Server-to-server Pixel events are also tracked. Pixel events fired include:
+1. Автоматическая инъекция событий Facebook Pixel на все веб-страницы магазина в традиционном/адаптивном веб-дизайне. Также отслеживаются межсерверные события Pixel. Запущенные пиксельные события включают:
     - PageView
     - ViewContent
     - Purchase
@@ -28,31 +27,28 @@ Source code for Facebook Business Extension for OpenCart. This is for OpenCart v
     - CompleteRegistration
     - Contact
     - ViewBrand
+2. Автоматическая синхронизация ваших товаров OpenCart с каталогом Facebook.
+3. Дополнительные поля каталога Facebook могут быть добавлены в продукты OpenCart для каталога Facebook, то есть конкретная категория продуктов Google, цвет, пол, материал и т. д.
+4. Отправка персональной идентифицирующей информации в пиксельных событиях в виде адреса электронной почты, имени, фамилии и телефона. Эта опция по умолчанию отключена и может быть изменена на этапе установки плагина.
+5. Возможность отображать панель согласия на использование файлов cookie для клиентов, просматривающих ваш веб-сайт OpenCart.
+6. Включение плагина чата Facebook Messenger на вашем веб-сайте OpenCart.
 
-2. Auto-synchronisation of your OpenCart products to Facebook Catalog.
+## Сборка Facebook Business Extension для OpenCart из исходных кодов
 
-3. Additional Facebook Catalog fields can be added to OpenCart products for Facebook Catalog, i.e. specific Google Product Category, Color, Gender, Material etc.
+Найдите правильную версию для вашей установки OpenCart и заархивируйте содержимое папки. Переименуйте zip-файл в `Facebook_Business_Extension.ocmod.zip`. Убедитесь, что zip-файл заканчивается на `.ocmod.zip`, иначе установка будет неудачной.
 
-4. Sending of Personal Identifiable Information in the pixel events in the form of email address, first name, last name and telephone. This option is disabled by default and can be changed during the plugin installation stage.
+- Единственная папка, которая должна находиться в корне zip-файла, - это папка "upload". НЕ включайте никакие другие подпапки в корень zip-файла, так как это приведет к неудачной установке плагина.
+- Для **OpenCart 2.0.x - 2.2.x** убедитесь, что файл `install.xml` также находится в корне zip-файла. Это означает, что корень вашего zip-файла содержит **два** элемента: одну папку `upload` и один файл `install.xml`.
+- Для **OpenCart 2.3.x - 3.x.x** и выше корень вашего zip-файла должен содержать только **один** элемент: одну папку `upload`.
 
-5. Option to display Cookie Consent Bar to customers viewing your OpenCart website.
+## Установка расширения Facebook Business Extension на работающий веб-сайт OpenCart
 
-6. Enabling the Facebook Messenger chat plugin on your OpenCart website.
+Смотрите руководство по установке [здесь](https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/INSTALL_GUIDE.md) или его [перевод](https://github.com/ruOpenCart/Facebook-For-OpenCart/blob/master/INSTALL_GUIDE.md).
 
-# Building Facebook Business Extension for OpenCart from the source codes
-Look for the correct version for your OpenCart installation and zip up contents of the folder. Rename the zip file to `Facebook_Business_Extension.ocmod.zip`. Please ensure that the zip file ends with `.ocmod.zip`, otherwise, installation will be unsuccessful.
+## Часто задаваемые вопросы
 
-- The only folder that should be in the root of the zip file is the "upload" folder. Do NOT include any other sub-folders in the root of the zip file as it will result in unsuccessful installation of the plugin.
+Обратитесь к руководству по часто задаваемым вопросам [здесь](https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/FAQ.md) или к ее [переводу](https://github.com/ruOpenCart/Facebook-For-OpenCart/blob/master/FAQ.md).
 
-- For **OpenCart 2.0.x to 2.2.x**, please ensure that the `install.xml` file is also located in the root of the zip file. This means that the root of your zip file contains **two** items: one `upload` folder and one `install.xml` file.
+## Лицензия
 
-- For **OpenCart 2.3.x to 3.x.x** and above, the root of your zip file should only contain **one** item: one `upload` folder.
-
-# Installing Facebook Business Extension on a running OpenCart website
-Refer to the installation guide [here](https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/INSTALL_GUIDE.md).
-
-# Frequently asked questions
-Refer to the FAQ guide [here](https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/FAQ.md).
-
-# License
-Facebook Business Extension for OpenCart is Platform-licensed, as found in the LICENSE file [here](https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/LICENSE).
+Расширение Facebook Business Extension для OpenCart имеет лицензию на платформу, как указано в файле LICENSE [здесь](https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/LICENSE).

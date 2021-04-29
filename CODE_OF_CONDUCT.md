@@ -1,3 +1,3 @@
-# Code of Conduct
+# Нормы поведения
 
-Facebook has adopted a Code of Conduct that we expect project participants to adhere to. Please read the [full text](https://code.facebook.com/pages/876921332402685/open-source-code-of-conduct) so that you can understand what actions will and will not be tolerated.
+Facebook принял Кодекс поведения, которого мы ожидаем от участников проекта. Прочтите [полный текст](https://code.facebook.com/pages/876921332402685/open-source-code-of-conduct), чтобы понять, какие действия будут и какие недопустимы.
