@@ -1,9 +1,11 @@
 <?php
-// Copyright 2017-present, Facebook, Inc.
-// All rights reserved.
-
-// This source code is licensed under the license found in the
-// LICENSE file in the root directory of this source tree.
+/**
+  * Copyright (c) Facebook, Inc. and its affiliates.
+  * All rights reserved.
+  *
+  * This source code is licensed under the license found in the
+  * LICENSE file in the root directory of this source tree.
+  */
 
 class ControllerExtensionModuleFacebookBusiness extends Controller {
     private $facebook_app_id = '785409108588782';
@@ -620,7 +622,7 @@ class ControllerExtensionModuleFacebookBusiness extends Controller {
         $this->model_extension_module_facebook_business->updateUseS2SUsePIIByAAMSetting();
 
         $data['facebook_pixel_id'] = $this->config->get('facebook_pixel_id');
-        $data['facebook_pixel_pii'] = $this->model_extension_module_facebook_business->getPii();
+        $data['facebook_pixel_pii'] = json_encode($this->model_extension_module_facebook_business->getPii(), JSON_PRETTY_PRINT | JSON_FORCE_OBJECT);
         $data['facebook_pixel_params'] = $this->model_extension_module_facebook_business->getAgentParameters();
         $data['facebook_pixel_event_params'] = $this->model_extension_module_facebook_business->getEventParameters();
         $data['facebook_cookie_bar_status'] = $this->config->get('module_facebook_business_cookie_bar_status');
@@ -638,9 +640,9 @@ class ControllerExtensionModuleFacebookBusiness extends Controller {
         $output = str_replace('</head>', $html, $output);
     }
 
-    public function eventPostModelAddOrder($route, &$data, $order_id) {
-        if ($order_id) {
-            $this->session->data['facebook_business_order_id'] = $order_id;
+    public function eventPreControllerCheckoutSuccess($route, &$data) {
+        if (!empty($this->session->data['order_id'])) {
+            $this->session->data['facebook_business_order_id'] = $this->session->data['order_id'];
         }
     }
 }

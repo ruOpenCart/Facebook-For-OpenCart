@@ -1,9 +1,11 @@
 <?php
-// Copyright 2017-present, Facebook, Inc.
-// All rights reserved.
-
-// This source code is licensed under the license found in the
-// LICENSE file in the root directory of this source tree.
+/**
+  * Copyright (c) Facebook, Inc. and its affiliates.
+  * All rights reserved.
+  *
+  * This source code is licensed under the license found in the
+  * LICENSE file in the root directory of this source tree.
+  */
 
 require_once(DIR_SYSTEM . 'library/vendor/facebook_business/vendor/autoload.php');
 
@@ -206,7 +208,7 @@ class ControllerExtensionModuleFacebookBusiness extends Controller {
         $this->model_setting_event->addEvent('module_facebook_business', 'admin/model/catalog/product/deleteProduct/after', 'extension/module/facebook_business/eventPostModelDeleteProduct');
         $this->model_setting_event->addEvent('module_facebook_business', 'catalog/view/common/header/before', 'extension/module/facebook_business/eventPreViewCommonHeader');
         $this->model_setting_event->addEvent('module_facebook_business', 'catalog/view/common/header/after', 'extension/module/facebook_business/eventPostViewCommonHeader');
-        $this->model_setting_event->addEvent('module_facebook_business', 'catalog/model/checkout/order/addOrder/after', 'extension/module/facebook_business/eventPostModelAddOrder');
+        $this->model_setting_event->addEvent('module_facebook_business', 'catalog/controller/checkout/success/before', 'extension/module/facebook_business/eventPreControllerCheckoutSuccess');
 
         $this->load->model('setting/setting');
         $this->model_setting_setting->editSetting('module_facebook_business', array('module_facebook_business_status' => 1));

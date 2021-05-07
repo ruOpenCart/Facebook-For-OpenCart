@@ -1,9 +1,11 @@
 <?php
-// Copyright 2017-present, Facebook, Inc.
-// All rights reserved.
-
-// This source code is licensed under the license found in the
-// LICENSE file in the root directory of this source tree.
+/**
+  * Copyright (c) Facebook, Inc. and its affiliates.
+  * All rights reserved.
+  *
+  * This source code is licensed under the license found in the
+  * LICENSE file in the root directory of this source tree.
+  */
 
 require_once(DIR_SYSTEM . 'library/vendor/facebook_business/vendor/autoload.php');
 
@@ -17,7 +19,7 @@ use FacebookAds\Object\ServerSide\UserData;
 use FacebookAds\Object\ServerSide\Util;
 
 class ModelModuleFacebookBusiness extends Model {
-    private $pluginVersion = '4.0.0';
+    private $pluginVersion = '4.0.3';
 
     // this function is a direct lifting from admin/model/catalog/product.php
     // except that the SQL query is joining other tables to obtain
@@ -189,16 +191,19 @@ class ModelModuleFacebookBusiness extends Model {
 
         if ($this->config->get('facebook_pixel_use_pii')) {
             if ($this->customer->isLogged()) {
+                $customer_id = $this->customer->getId();
                 $email = $this->customer->getEmail();
                 $firstname = $this->customer->getFirstName();
                 $lastname = $this->customer->getLastName();
                 $telephone = $this->customer->getTelephone();
             } elseif (isset($this->session->data['guest'])) {
+                $customer_id = '';
                 $email = isset($this->session->data['guest']['email']) ? $this->session->data['guest']['email'] : '';
                 $firstname = isset($this->session->data['guest']['firstname']) ? $this->session->data['guest']['firstname'] : '';
                 $lastname = isset($this->session->data['guest']['lastname']) ? $this->session->data['guest']['lastname'] : '';
                 $telephone = isset($this->session->data['guest']['telephone']) ? $this->session->data['guest']['telephone'] : '';
             } else {
+                $customer_id = '';
                 $email = '';
                 $firstname = '';
                 $lastname = '';
@@ -223,10 +228,14 @@ class ModelModuleFacebookBusiness extends Model {
                 if ($telephone && in_array('ph', $enabled_aam_fields)) {
                     $facebook_pixel_pii['ph'] = htmlspecialchars($telephone, ENT_QUOTES, 'UTF-8');
                 }
+
+                if ($customer_id && in_array('external_id', $enabled_aam_fields)) {
+                    $facebook_pixel_pii['external_id'] = (string)$customer_id;
+                }
             }
         }
 
-        return json_encode($facebook_pixel_pii, JSON_PRETTY_PRINT | JSON_FORCE_OBJECT);
+        return $facebook_pixel_pii;
     }
 
     public function getEventParameters() {
@@ -604,7 +613,10 @@ class ModelModuleFacebookBusiness extends Model {
                         'event_id'          => $event_id
                     );
                 } else {
-                    $facebook_pixel_event_params = array('event_name' => $event_name);
+                    $facebook_pixel_event_params = array(
+                        'event_name'        => $event_name,
+                        'event_id'          => $event_id
+                    );
                 }
               
                 break;
@@ -680,10 +692,11 @@ class ModelModuleFacebookBusiness extends Model {
                     $this->language->load('account/success');
 
                     $facebook_pixel_event_params = array(
-                        'event_name'   => $event_name,
-                        'content_name' => $this->formatString($this->language->get('heading_title')),
-                        'currency'     => strtoupper($this->session->data['currency']),
-                        'status'       => true
+                        'event_name'        => $event_name,
+                        'content_name'      => $this->formatString($this->language->get('heading_title')),
+                        'currency'          => strtoupper($this->session->data['currency']),
+                        'status'            => true,
+                        'event_id'          => $event_id
                     );
                 }
 
@@ -693,7 +706,8 @@ class ModelModuleFacebookBusiness extends Model {
                 $event_name = 'Contact';
 
                 $facebook_pixel_event_params = array(
-                    'event_name' => $event_name
+                    'event_name' => $event_name,
+                    'event_id'   => $event_id
                 );
 
                 break;
@@ -745,19 +759,22 @@ class ModelModuleFacebookBusiness extends Model {
                         }
 
                         $facebook_pixel_event_params = array(
-                          'event_name'        => $event_name,
-                          'content_name'      => $this->formatString($manufacturer_info['name']),
-                          'content_category'  => $this->formatString($manufacturer_info['name']),
-                          'content_ids'       => $content_ids,
-                          'content_type'      => 'product',
-                          'contents'          => $contents,
-                          'currency'          => strtoupper($this->session->data['currency']),
-                          'value'             => $value,
-                          'num_items'         => $num_items,
-                          'event_id'          => $event_id
-                      );
+                            'event_name'        => $event_name,
+                            'content_name'      => $this->formatString($manufacturer_info['name']),
+                            'content_category'  => $this->formatString($manufacturer_info['name']),
+                            'content_ids'       => $content_ids,
+                            'content_type'      => 'product',
+                            'contents'          => $contents,
+                            'currency'          => strtoupper($this->session->data['currency']),
+                            'value'             => $value,
+                            'num_items'         => $num_items,
+                            'event_id'          => $event_id
+                        );
                     } else {
-                        $facebook_pixel_event_params = array('event_name' => $event_name);
+                        $facebook_pixel_event_params = array(
+                            'event_name'        => $event_name,
+                            'event_id'          => $event_id
+                        );
                     }
                 }
 
@@ -858,46 +875,48 @@ class ModelModuleFacebookBusiness extends Model {
             $access_token = $this->config->get('facebook_system_user_access_token');
             $agent_data = json_decode($this->getAgentParameters(), true);
             $agent = $agent_data['agent'];
-            $user_pii_data = json_decode($this->getPii(), true);
+            $user_pii_data = $this->getPii();
 
             try {
                 $user_data = (new UserData())
-                  ->setClientIpAddress(Util::getIpAddress())
-                  ->setClientUserAgent(Util::getHttpUserAgent())
-                  ->setFbp(Util::getFbp())
-                  ->setFbc(Util::getFbc());
-            
-                $event = (new Event())
-                  ->setEventName($event_name)
-                  ->setEventTime(time())
-                  ->setEventId($event_id)
-                  ->setEventSourceUrl(Util::getRequestUri())
-                  ->setActionSource(ActionSource::WEBSITE)
-                  ->setUserData($user_data)
-                  ->setDataProcessingOptions(array())
-                  ->setDataProcessingOptionsCountry(0)
-                  ->setDataProcessingOptionsState(0)
-                  ->setCustomData(new CustomData());
+                    ->setClientIpAddress(Util::getIpAddress())
+                    ->setClientUserAgent(Util::getHttpUserAgent())
+                    ->setFbp(Util::getFbp())
+                    ->setFbc(Util::getFbc());
 
-                $enabled_aam_fields = explode(',', $this->config->get('facebook_pixel_enabled_aam_fields'));
-
-                if ($enabled_aam_fields) {
-                    if (!empty($user_pii_data['em']) && in_array('em', $enabled_aam_fields)) {
+                if ($user_pii_data) {
+                    if (!empty($user_pii_data['em'])) {
                         $user_data->setEmail($user_pii_data['em']);
                     }
             
-                    if (!empty($user_pii_data['fn']) && in_array('fn', $enabled_aam_fields)) {
+                    if (!empty($user_pii_data['fn'])) {
                         $user_data->setFirstName($user_pii_data['fn']);
                     }
             
-                    if (!empty($user_pii_data['ln']) && in_array('ln', $enabled_aam_fields)) {
+                    if (!empty($user_pii_data['ln'])) {
                         $user_data->setLastName($user_pii_data['ln']);
                     }
             
-                    if (!empty($user_pii_data['ph']) && in_array('ph', $enabled_aam_fields)) {
+                    if (!empty($user_pii_data['ph'])) {
                         $user_data->setPhone($user_pii_data['ph']);
                     }
+
+                    if (!empty($user_pii_data['external_id'])) {
+                        $user_data->setExternalId($user_pii_data['external_id']);
+                    }
                 }
+
+                $event = (new Event())
+                    ->setEventName($event_name)
+                    ->setEventTime(time())
+                    ->setEventId($event_id)
+                    ->setEventSourceUrl(Util::getRequestUri())
+                    ->setActionSource(ActionSource::WEBSITE)
+                    ->setUserData($user_data)
+                    ->setDataProcessingOptions(array())
+                    ->setDataProcessingOptionsCountry(0)
+                    ->setDataProcessingOptionsState(0)
+                    ->setCustomData(new CustomData());
 
                 $custom_data = $event->getCustomData();
 
