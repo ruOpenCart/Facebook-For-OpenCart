@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) Facebook, Inc. and its affiliates. -->
+<!-- All rights reserved. -->
+
+<!-- This source code is licensed under the license found in the -->
+<!-- LICENSE file in the root directory of this source tree. -->
 <modification>
   <name>Facebook Business Extension</name>
   <code>facebook_business</code>
-  <version>4.0.2.RE2</version>
+  <version>4.0.3.RE2</version>
   <author>Facebook</author>
   <link>https://forum.opencart.name/resources/facebook-business-для-opencart.30/</link>
 </modification>

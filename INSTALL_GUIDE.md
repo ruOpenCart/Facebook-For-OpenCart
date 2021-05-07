@@ -3,11 +3,7 @@
 - Последнюю версию плагина можно найти по адресу [здесь](https://github.com/facebookincubator/Facebook-For-OpenCart/releases/latest) или [перевод](https://github.com/ruOpenCart/Facebook-For-OpenCart/releases/latest)
 - Последнюю версию README можно найти по адресу [здесь](https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/README.md) или [перевод](https://github.com/ruOpenCart/Facebook-For-OpenCart/blob/master/README.md)
 - Последнюю версию INSTALL_GUIDE можно найти по адресу [здесь](https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/INSTALL_GUIDE.md) или [перевод](https://github.com/ruOpenCart/Facebook-For-OpenCart/blob/master/INSTALL_GUIDE.md)
-- Предыдущую версию INSTALL_GUIDE до v4.0.0 можно найти по адресу [здесь](https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/INSTALL_GUIDE_3.x.x.md) или [перевод](https://github.com/ruOpenCart/Facebook-For-OpenCart/blob/master/INSTALL_GUIDE_3.x.x.md)
-- Предыдущую версию INSTALL_GUIDE до v3.0.0 можно найти по адресу [здесь](https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/INSTALL_GUIDE_2.x.x.md) или [перевод](https://github.com/ruOpenCart/Facebook-For-OpenCart/blob/master/INSTALL_GUIDE_2.x.x.md)
 - Последнюю версию FAQ можно найти по адресу [здесь](https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/FAQ.md) или [перевод](https://github.com/ruOpenCart/Facebook-For-OpenCart/blob/master/FAQ.md)
-- Предыдущую версию FAQ до v4.0.0 можно найти по адресу [здесь](https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/FAQ_3.x.x.md) или [перевод](https://github.com/ruOpenCart/Facebook-For-OpenCart/blob/master/FAQ_3.x.x.md)
-- Предыдущую версию FAQ до v3.0.0 можно найти по адресу [здесь](https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/FAQ_2.x.x.md) или [перевод](https://github.com/ruOpenCart/Facebook-For-OpenCart/blob/master/FAQ_2.x.x.md)
 - По другим вопросам или сообщениям об ошибках **в отношении плагина OpenCart**, пожалуйста, откройте заявку на нашем сайте [helpdesk](https://marketinsg.zendesk.com/') или откройте новую проблему на [github](https://github.com/facebookincubator/)
 - Если у вас возникли вопросы или вопросы, связанные с Facebook, отправьте заявку в службу поддержки Facebook Business на странице [Справочный центр Facebook Business](https://www.facebook.com/business/help/support)
 
@@ -18,18 +14,18 @@
 2. Удалите с веб-сайта все существующие реализации пикселей. События дублирования пикселей могут быть запущены, если существуют другие реализации пикселей.
 
 3. Если вы ранее использовали плагин Facebook Business Extension версии 3.1.2 и ниже, следуйте приведенным ниже руководствам по удалению, чтобы удалить существующий плагин, прежде чем пытаться установить новый плагин:
-    - Для Facebook Business Extension версии 2.x.x нажмите [здесь](https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/INSTALL_GUIDE_2.x.x.md) или [перевод](https://github.com/ruOpenCart/Facebook-For-OpenCart/blob/master/INSTALL_GUIDE_2.x.x.md)
-    - Для Facebook Business Extension версии 3.x.x нажмите [здесь](https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/INSTALL_GUIDE_3.x.x.md) или [перевод](https://github.com/ruOpenCart/Facebook-For-OpenCart/blob/master/INSTALL_GUIDE_3.x.x.md)
+    - Для Facebook Business Extension версий 2.x.x и 3.x.x нажмите [здесь](#удаление-плагина)
 
 4. Убедитесь, что ваш веб-сервер использует PHP версии 7.2 и выше. Это связано с тем, что плагин использует внутри Facebook Business SDK и требует PHP версии 7.2 и выше.
 
-5. Загрузите последнюю версию файла плагина, ```Facebook_Business_Extension.ocmod.zip```.
+5. Загрузите последнюю версию файла плагина, ```Facebook_Business_Extension-OCxxx.ocmod.zip```, где xxx это версия используемого OpenCart.
     - Вы можете получить последнюю версию плагина на следующих сайтах:
       - [Маркетплейс OpenCart](https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=32336)
       - [Последний выпуск на Github](https://github.com/facebookincubator/Facebook-For-OpenCart/releases/latest)
       - [Последний выпуск русской версии на Github](https://github.com/ruOpenCart/Facebook-For-OpenCart/releases/latest)
 
     - Убедитесь, что файл плагина имеет расширение ```.ocmod.zip```. [Скриншот](https://drive.google.com/file/d/1fHks0Ab0Wlo42xGqaK09QjHi8QKK-aIi/view?usp=sharing)
+    - Убедитесь, что вы загрузили правильный zip-файл для установки OpenCart.
 
 6. Установка плагина осуществляется через установщик расширений OpenCart для всех версий OpenCart. Для OpenCart 2.0.x - 2.2.x плагин также использует OCMOD (модификации OpenCart).
     - Для OpenCart 2.0.x - 2.2.x:
@@ -40,14 +36,16 @@
           - Перейдите на вкладку FTP и настройте данные FTP.
         - Вариант 2: установка QuickFix: проблема с установщиком расширений при отключенной поддержке FTP.
           - [Ссылка для скачивания](https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=18892)
-      - Установка плагина путем ручной загрузки файлов плагина на ваш веб-сервер не рекомендуется, так как скрипт OCMOD не будет установлен правильно.
+      - Установка плагина путем ручной загрузки файлов плагина на ваш веб-сервер не рекомендуется, так как скрипт OCMOD не будет установлен правильно. Вам следует устанавливать плагин вручную только в том случае, если вы можете правильно установить скрипт OCMOD. В противном случае расширение будет работать некорректно.
       - установка vQmod НЕ поддерживается.
 
     - Для OpenCart 2.3.x или OpenCart 3.x:
       - Дополнительная настройка не требуется, поскольку расширение использует события OpenCart вместо OCMOD.
       - Поддерживается установка плагина путем ручной загрузки файлов плагина на ваш веб-сервер.
 
-7. Наш плагин использует стандартную структуру папок OpenCart, то есть `admin`, `catalog` и `system`. Если ваша структура папок отличается **и** вы выполняете установку плагина посредством ручной загрузки, вам необходимо будет соответствующим образом изменить имена каталогов плагина или убедиться, что вы загружаете в правильные каталоги.
+7. Наш плагин использует стандартную структуру папок OpenCart, то есть `admin`, `catalog` и `system`.
+      - Если ваша структура папок отличается **И** вы выполняете установку плагина посредством ручной загрузки, вам необходимо будет соответствующим образом изменить имена каталогов плагина или убедиться, что вы загружаете в правильные каталоги.
+      - Если вы выполняете установку через установщик расширений OpenCart, вам не нужно предпринимать никаких действий.
 
 8. Наш плагин сгенерирует канал каталога всех ваших продуктов и загрузит его в Facebook после завершения настройки Facebook Pixel и Catalog. В зависимости от конфигурации вашего веб-сервера и сервера базы данных могут возникнуть проблемы, если у вас большой каталог продуктов, например более 5000 товаров. Вам также может потребоваться увеличить настройки памяти для вашего веб-сервера и сервера базы данных. Пожалуйста, обратитесь к [FAQ](https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/FAQ.md) или его [переводу](https://github.com/ruOpenCart/Facebook-For-OpenCart/blob/master/FAQ.md) для получения более подробной информации.
 
@@ -113,7 +111,7 @@
 
 2. Если вы уже являетесь пользователем предыдущих версий Facebook Business Extension, вы должны увидеть другой экран, на котором все ваши ранее подключенные ресурсы были автоматически заполнены. Нажмите кнопку «Продолжить», чтобы завершить настройку. [Скриншот](https://drive.google.com/open?id=1QdOM1ZdcoY8YfrJJPD6MeN76XpLRH6bm)
 
-## Запустить представление управления
+## Запуск представления управления
 
 В Management View вы можете добавить дополнительные функции, такие как включить плагин Facebook Page Shop, плагин Facebook Messenger Chat и т. д.
 
@@ -179,7 +177,7 @@
         - Или, (для OpenCart 2.3.x - 3.x.x) нажмите Расширения -> Расширения -> В раскрывающемся списке Тип расширения выберите «Модули» -> Facebook Business Extension [Скриншот](https://drive.google.com/file/d/1FqI2tTCTCdAnNyTDkmcFGAIHlO0OJ0VF/view?usp=sharing)
       - Во всплывающем окне найдите плагин Messenger Chat и нажмите кнопку «Отключить». [Скриншот](https://drive.google.com/file/d/178EWYukGfV0zOoEodiE76GQoh-9fN_P8/view?usp=sharing)
 
-## Удалите существующие настройки Facebook для OpenCart
+## Удаление существующих настроек Facebook для OpenCart
 
 1. Удалить существующие настройки. [Видеоруководство](https://drive.google.com/file/d/1bhClnD8vw9Kwoh6is2zkdOY0MrJ4l3oa/view?usp=sharing)
     - Вы должны уже выполнить настройку бизнес-менеджера, страницы, пикселя и каталога для Facebook Business Extension. Шаги [здесь](#настройка-бизнес-менеджера-facebook-страницы-пикселя-и-каталога).
@@ -191,9 +189,9 @@
     - Должно появиться всплывающее окно с подтверждением. Нажмите кнопку ОК, чтобы продолжить удаление. [Скриншот](https://drive.google.com/file/d/1QLGBrf7FfYfXptcmtMydNPdLpJnSu-Cz/view?usp=sharing)
 2. После успешного удаления вы должны увидеть страницу с кнопкой «Начать». [Скриншот](https://drive.google.com/open?id=11rel4BoOcxcmU_aqB6Pn-CIUwFVNTi2w)
 
-## Удалите плагин
+## Удаление плагина
 
-- Если вы используете Facebook Business Extension v3.x и ниже:
+- Если вы используете Facebook Business Extension v3.x.x и ниже:
 
   1. [Видеоруководство](https://drive.google.com/open?id=1aPxqEcH1J3tT3bG0vMIC5DLnkDN7fo_d)
 
@@ -239,15 +237,7 @@
 
     3. Чтобы удалить файлы плагина с вашего веб-сервера, перейдите в Расширения -> Установщик и найдите файл ```.ocmod.zip```, который вы загрузили ранее, чтобы установить плагин Facebook Business Extension. Затем нажмите кнопку «Удалить». [Скриншот](https://drive.google.com/file/d/1HYkedlOIf-kkkMqkx_KvP1qytu5D2HSM/view?usp=sharing)
 
-## Обновите плагин до более новой версии
-
-- Если вы используете Facebook Business Extension v3.x и ниже и обновляетесь до Facebook Business Extension v4.x.x:
-
-  1. У вас уже должен быть установлен плагин Facebook Business Extension на своем веб-сайте OpenCart.
-
-  2. Удалите существующий плагин Facebook Business Extension. [Видеоруководство](https://drive.google.com/open?id=1aPxqEcH1J3tT3bG0vMIC5DLnkDN7fo_d)
-
-  3. Установите новое расширение Facebook Business Extension версии 4.0.0 и выше, выполнив следующие действия [здесь](#установка-плагина).
+## Обновление плагина до более новой версии
 
 - Если вы используете Facebook Business Extension v4.x.x и обновляетесь до Facebook Business Extension v4.x.x и выше:
 
@@ -276,15 +266,13 @@
           - Затем на той же странице снова нажмите «Установить».
           - Это необходимо для установки / удаления любых событий или изменений базы данных, которые могли быть внесены в новую версию плагина. Обратите внимание, что это не удалит ваше соединение с Facebook Business, но ваши настройки OpenCart для Facebook Business Extension (т. е. синхронизация специальных цен в качестве скидки с опцией каталога Facebook и включение опции панели cookie) будут сброшены.
 
-- Если вы используете Facebook Business Extension v3.x и ниже и обновляетесь до Facebook Business Extension v3.x и ниже:
+- Если вы используете Facebook Business Extension v3.x.x и ниже и обновляетесь до Facebook Business Extension v4.x.x:
 
-  1. [Видеоруководство](https://drive.google.com/open?id=12dX2wYTcE3Y7Wf-ZBD_6X4EAZU2L-8vp)
+  1. У вас уже должен быть установлен плагин Facebook Business Extension на своем веб-сайте OpenCart.
 
-  2. У вас уже должен быть установлен плагин Facebook Business Extension на своем веб-сайте OpenCart.
+  2. Удалите существующий плагин Facebook для OpenCart. [Видеоруководство](https://drive.google.com/open?id=1aPxqEcH1J3tT3bG0vMIC5DLnkDN7fo_d)
 
-  3. Удалите существующий плагин Facebook для OpenCart. [Видеоруководство](https://drive.google.com/open?id=1aPxqEcH1J3tT3bG0vMIC5DLnkDN7fo_d)
-
-  4. Установите плагин более поздней версии. Убедитесь, что версия Facebook для OpenCart отображается как более поздняя версия. [Скриншот.](https://drive.google.com/open?id=19Nfp_1x9cQbGCk-rMmi3PkLy3NEPFHdS) [Видеоруководство](https://drive.google.com/open?id=1V4Nu8nlmHX5ppKqsjcR-xR05Rozb7MKN)
+  3. Установите новое расширение Facebook Business Extension версии 4.0.0 и выше, следуя инструкциям [здесь](#установка-плагина).
 
 ## Панель cookie на вашем сайте OpenCart
 
