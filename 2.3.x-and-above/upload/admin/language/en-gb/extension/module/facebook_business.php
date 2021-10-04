@@ -14,12 +14,15 @@ $_['heading_title']                         = '<span style="color:#1877F2;"><i c
 $_['text_extension']                        = 'Расширения';
 $_['text_success']                          = 'Успешно: Вы модифицировали модуль Facebook Business Extension!';
 $_['text_edit']                             = 'Редактировать модуль Facebook Business Extension';
-$_['text_heading']                          = 'Превращайте свои товары в рекламу на Facebook';
-$_['text_info_1']                           = 'Легко установите пиксель и создайте каталог товаров на Facebook, чтобы продавать больше своих товаров.';
-$_['text_info_2']                           = 'Используйте пиксель, чтобы собрать нужную аудиторию и измерить рентабельность ваших рекламных затрат.';
-$_['text_info_3']                           = 'Продвигайте сразу все свои продукты с помощью каталога, вместо того, чтобы создавать отдельные объявления.';
-$_['text_upgrade_message']                  = 'Доступна более новая версия плагина Facebook Business Extension. Чтобы скачать его, перейдите по ссылке <a href="https://github.com/facebookincubator/Facebook-For-OpenCart/releases" target="_blank">Github</a> | <a href="https://github.com/ruOpenCart/Facebook-For-OpenCart/releases" target="_blank">Github с переводом на русский язык</a> или <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=32336" target="_blank">маркетплейс OpenCart</a>.';
+$_['text_heading']                          = 'Превратите свои товары в рекламу на Facebook';
+$_['text_info_1']                           = 'Легко установите пиксель и создайте каталог продуктов на Facebook, чтобы продавать больше своих продуктов.';
+$_['text_info_2']                           = 'Используйте пиксель, чтобы собрать нужную аудиторию и измерить рентабельность своих рекламных затрат.';
+$_['text_info_3']                           = 'Продвигайте сразу все свои товары с помощью каталога, вместо того, чтобы создавать отдельные объявления.';
+$_['text_upgrade_message']                  = 'Доступна более новая версия плагина Facebook Business Extension. Чтобы загрузить его, перейдите на <a href="https://github.com/facebookincubator/Facebook-For-OpenCart/releases" target="_blank">Github</a> или <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=32336" target="_blank">OpenCart маркетплейс</a>.';
 $_['text_plugin_version']                   = 'Версия плагина %s';
+$_['text_connection']                       = 'Facebook Business Connection';
+$_['text_ads_creation']                     = 'Создание рекламы';
+$_['text_ads_insights']                     = 'Статистика по рекламе';
 
 // Tab
 $_['tab_connection']                        = 'Подключение';
