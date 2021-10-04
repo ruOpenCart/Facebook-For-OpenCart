@@ -1,54 +1,54 @@
 Facebook Business Extension
-Latest version: 4.2.0
+Последняя версия: 4.2.0
 
-Change log
-4.2.0 - 27 Sep 2021
-* Added LWI Integration
-* Reduced cache duration of catalog feed from 8 hours to 1 hour
-* Removed redundant index() method in controller file
-* Added support for Rich Text Description for catalog feed
-* Fixed minor bugs and code improvements
-  1. Fixed <span> tag bug in OC 2.0.x version
-  2. Fixed a bug where missing client agent or IP address will cause an error with server event being sent
-  3. Fixed a bug where web hook calls can cause multiple installations
+Журнал изменений
+4.2.0 - 27 сентября 2021 г.
+* Добавлена интеграция с LWI
+* Уменьшена продолжительность кеширования ленты каталога с 8 часов до 1 часа
+* Удален избыточный метод index() в файле контроллера
+* Добавлена поддержка Rich Text Description для ленты каталога
+* Исправлены мелкие ошибки и улучшения кода
+  1. Исправлена ошибка тега <span> в версии OC 2.0.x
+  2. Исправлена ошибка, из-за которой отсутствие агента клиента или IP-адреса приводило к ошибке с отправкой серверного события
+  3. Исправлена ошибка, из-за которой вызовы веб-ловушек могут вызывать несколько установок
 
-4.1.1 - 16 Jun 2021
-* Fixed minor bugs and improvements
-  1. Fixed a bug where authentication from webhook can fail
-  2. Fixed a bug where servers using some form of proxy can cause sending of server pixel events to fail
-  3. Fixed a bug in OpenCart versions 3 and above where the product limit is invalid
+4.1.1 - 16 июня 2021 г.
+* Исправлены мелкие ошибки и улучшения
+  1. Исправлена ошибка, из-за которой аутентификация через веб-перехватчик могла не работать
+  2. Исправлена ошибка, из-за которой серверы, использующие какую-либо форму прокси, могли вызывать сбой отправки серверных пиксельных событий
+  3. Исправлена ошибка в OpenCart версии 3 и выше, когда лимит продукта недействителен
 
-4.1.0 - 21 May 2021
-* Added Facebook Business App Store Integration
-  1. Users can now install the Facebook Business Extension plugin on their OpenCart store, and then connect with it via Facebook Business App Store
-  2. Any installs/uninstalls through Facebook Business will be updated on the users' OpenCart stores
-* Fixed minor bugs and improvements
-  1. Fixed a bug where Purchase Events are sent with empty data for guest checkouts
-  2. Fixed a bug where ViewCategoryEvents are sent with empty data
-  3. Removed product description limitation of less than 30 characters for Facebook Catalog Feed
+4.1.0 - 21 мая 2021 г.
+* Добавлена интеграция с Facebook Business App Store
+  1. Теперь пользователи могут установить плагин Facebook Business Extension в своем магазине OpenCart, а затем подключиться к нему через Facebook Business App Store
+  2. Любые установки / удаления через Facebook Business будут обновлены в магазинах OpenCart пользователей
+* Исправлены мелкие ошибки и улучшения
+  1. Исправлена ошибка, из-за которой события покупок отправлялись с пустыми данными для гостевых касс
+  2. Исправлена ошибка, из-за которой ViewCategoryEvents отправлялись с пустыми данными
+  3. Убрано ограничение на описание продукта длиной менее 30 символов для ленты каталога Facebook
 
-4.0.3 - 6 May 2021
-* Updated Facebook Copyright Header as per Facebook requirements
-* Added External ID parameter for Pixel Events
-* Fixed minor bugs and improvements
+4.0.3 - 6 мая 2021 г.
+* Обновлен заголовок авторских прав Facebook в соответствии с требованиями Facebook
+* Добавлен параметр внешнего идентификатора для событий пикселей
+* Исправлены мелкие ошибки и улучшения
 
-4.0.2 - 29 Apr 2021
-* Added Facebook Copyright Message
+4.0.2 - 29 апреля 2021 г.
+* Добавлено сообщение об авторских правах в Facebook
 
-4.0.1 - 25 Apr 2021
-* Added plugin version in OpenCart admin plugin page
-* Fixed empty data in Purchase Event bug
-* Fixed incorrect contents data in AddToCart Event
-* Fixed Facebook Messenger Chat locale bug
-* Fixed empty Facebook Catalog Feed CSV file bug
-* Fixed other minor bugs
+4.0.1 - 25 апреля 2021 г.
+* Добавлена версия плагина на странице админки OpenCart
+* Исправлена ошибка пустых данных в событии покупки
+* Исправлены некорректные данные содержимого в событии AddToCart
+* Исправлена ошибка локали чата в Facebook Messenger
+* Исправлена ошибка с пустым CSV-файлом ленты каталогов Facebook
+* Исправлены другие мелкие ошибки
 
-4.0.0 - 15 Apr 2021
-* Revamped and restructured entire plugin
-* Improvements made to plugin
-* Upgraded to Facebook Graph API v10.0
-* Added custom Facebook Catalog fields for OpenCart products
-* Fixed and resolved many existing common issues and bugs
+4.0.0 - 15 апреля 2021 г.
+* Обновлен и реструктурирован весь плагин
+* Улучшения, внесенные в плагин
+* Обновлен до Facebook Graph API v10.0
+* Добавлены настраиваемые поля каталога Facebook для продуктов OpenCart
+* Исправлено и решено множество существующих общих проблем и ошибок
 
 3.1.2 - 1 Feb 2021
 * Added action_source parameter due to Conversions API requirement change starting Feb 15th - https://developers.facebook.com/docs/marketing-api/conversions-api
@@ -132,7 +132,7 @@ Change log
 * Extracts out 2 error messages from tpl/twig file into language file - contributed by https://github.com/osworx
 * Includes instruction on how to reset access token in the FAQ.md file - https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/FAQ.md
 * Includes instruction on how to handle "Invalid file type" when trying to install the plugin on OpenCart - https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/FAQ.md
-* Minor formatting adjustment in the FAQ.md file - https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/FAQ.md 
+* Minor formatting adjustment in the FAQ.md file - https://github.com/facebookincubator/Facebook-For-OpenCart/blob/master/FAQ.md
 
 2.1.8 - 11 May 2019
 * Fix a bug where the feature to refresh access token is not displaying. This is applicable for invalid access tokens that cannot be decrypted
