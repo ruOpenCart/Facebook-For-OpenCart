@@ -11,7 +11,7 @@
 $_['heading_title']                         = '<span style="color:#1877F2;"><i class="fa fa-facebook-square"></i> Facebook Business Extension</span>';
 
 // Text
-$_['text_extension']                        = 'Extensions';
+$_['text_extension']                        = 'Расширения';
 $_['text_success']                          = 'Success: You have modified module Facebook Business Extension!';
 $_['text_edit']                             = 'Edit Facebook Business Extension module';
 $_['text_heading']                          = 'Turn your products into ads on Facebook';
